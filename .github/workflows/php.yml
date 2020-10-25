@@ -13,9 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    - name: gtk
+      run : apt install libgtk-3-dev
+
     - name: phpsciter-install
       run : phpize && ./configure && make && make install
-
 
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
