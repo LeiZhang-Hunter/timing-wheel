@@ -40,7 +40,7 @@ jobs:
         run: cd ../../../
 
       - name: add sciter-library 5
-        run: ldconfig -p | grep sciter
+        run: ldconfig -p \| grep sciter
 
       - name: run-tests
         run: php -c php.ini -f examples/phpsciter-load-frame/index.phpt
