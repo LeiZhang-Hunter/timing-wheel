@@ -11,12 +11,15 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    before_install:
+      - php -v
+      - phpize
+
     steps:
     - uses: actions/checkout@v2
 
     - name: php -v
-      run :
-      - php -v | phpize
+      run : before_install
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
