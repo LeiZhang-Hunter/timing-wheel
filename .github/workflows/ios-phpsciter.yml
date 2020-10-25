@@ -17,3 +17,6 @@ jobs:
       - name: Set Default Scheme
         run: |
           phpize
+          ./configure
+          make
+          sudo make install
