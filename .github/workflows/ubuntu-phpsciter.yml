@@ -25,6 +25,7 @@ jobs:
         run: echo "extension=phpsciter.so" >> php.ini
 
       - name: php modules
-        run: |
-        php -c php.ini -m
-        php examples/phpsciter-load-frame/index.phpt
+        run: php -c php.ini -m
+
+      - name: run-tests
+        run: php -c php.ini -f examples/phpsciter-load-frame/index.phpt
