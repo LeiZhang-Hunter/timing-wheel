@@ -18,5 +18,8 @@ jobs:
         run: |
           phpize
           ./configure
+          cd lib/sciter/mac
+          export DYLD_LIBRARY_PATH=$PWD
+          cd ../../../
           make
           sudo make install
