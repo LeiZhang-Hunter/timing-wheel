@@ -28,10 +28,13 @@ jobs:
         run: echo "extension=phpsciter.so" >> php.ini
 
       - name: php modules
-        run: php -c php.ini -m
+        run: php -c php.ini -m | grep sciter
 
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
+docker: iOS starter workflow
 
-    # - name: Run test suite
-    #   run: composer run-script test
+  name: build docker images
+
+  runs-on: macos-latest
+
+  steps:
+    phpize
