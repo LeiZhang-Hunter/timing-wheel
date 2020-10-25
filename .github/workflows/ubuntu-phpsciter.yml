@@ -27,13 +27,20 @@ jobs:
       - name: php modules
         run: php -c php.ini -m
 
-      - name: add sciter-library
-        run: |
-         cd lib/sciter/linux/
-         echo $PWD >> libsciter.conf
-         sudo cp libsciter.conf /etc/ld.so.conf.d/
-         sudo ldconfig
-         ldconfig -p | grep sciter
+      - name: add sciter-library 1
+        run: cd lib/sciter/linux/
+
+      - name: add sciter-library 2
+        run: echo $PWD >> libsciter.conf
+
+      - name: add sciter-library 3
+        run: sudo cp libsciter.conf /etc/ld.so.conf.d/
+
+      - name: add sciter-library 4
+        run: cd ../../../
+
+      - name: add sciter-library 5
+        run: ldconfig -p | grep sciter
 
       - name: run-tests
         run: php -c php.ini -f examples/phpsciter-load-frame/index.phpt
