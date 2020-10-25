@@ -25,7 +25,7 @@ jobs:
         run: php7.1 -i|grep php.ini
 
       - name: add phpsciter
-        run: sudo echo "extension=phpsciter.so" >> /etc/php/7.4/cli/php.ini
+        run: echo "extension=phpsciter.so" >> php.ini && php -c php.ini -m
 
       - name: php modules
         run: php -m
