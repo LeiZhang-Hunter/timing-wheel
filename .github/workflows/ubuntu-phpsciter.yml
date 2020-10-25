@@ -33,7 +33,7 @@ jobs:
         run: cd lib/sciter/linux/ && sudo cp libsciter.conf /etc/ld.so.conf.d/
 
       - name: add sciter-library 3
-        run: ldconfig -p
+        run: sudo ldconfig
 
       - name: add sciter-library 4
         run: ls /home/runner/work/timing-wheel/timing-wheel/lib/sciter/linux
