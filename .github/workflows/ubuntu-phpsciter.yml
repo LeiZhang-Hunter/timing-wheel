@@ -38,7 +38,7 @@ jobs:
       - name: add sciter-library 4
         run: cd ../../../
 
-      - name: add sciter-library 4
+      - name: add sciter-library 5
           run: ldconfig -p
 
       - name: run-tests
