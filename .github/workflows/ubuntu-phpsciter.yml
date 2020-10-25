@@ -22,7 +22,7 @@ jobs:
         run : phpize && ./configure && make && sudo make install
 
       - name: display php.ini
-        run: php -c php.ini -m | grep "php.ini"
+        run: php -c php.ini -m
 
       - name: add phpsciter
         run: echo "extension=phpsciter.so" >> php.ini
