@@ -1,4 +1,4 @@
-name: PHP Sciter
+name: linux-phpsciter
 
 on:
   push:
