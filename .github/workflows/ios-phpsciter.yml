@@ -23,3 +23,4 @@ jobs:
           cd ../../../
           make
           sudo make install
+          php examples/phpsciter-load-frame/index.phpt
