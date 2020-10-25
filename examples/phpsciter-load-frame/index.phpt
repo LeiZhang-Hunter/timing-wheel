@@ -17,7 +17,6 @@ if ($pid == 0)
     PHPSciter::ALLOW_FILE_IO | PHPSciter::ALLOW_SOCKET_IO | PHPSciter::ALLOW_EVAL |
                                    PHPSciter::ALLOW_SYSINFO);
 
-    exit(3);
     $oSciter->run(PHPSciter::SW_TITLEBAR | PHPSciter::SW_RESIZEABLE | PHPSciter::SW_MAIN | PHPSciter::SW_ENABLE_DEBUG
     |PHPSciter::SW_CONTROLS);
     exit(0);
@@ -29,7 +28,7 @@ if ($pid == 0)
         exit(pcntl_wexitstatus($status));
     }
     $r = posix_kill($pid, 15);
-
+    exit(0);
 }
 
 ?>
