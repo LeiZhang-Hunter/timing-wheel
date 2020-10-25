@@ -11,11 +11,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    action "Run tests" {
-        uses = "franzliedke/gh-action-php@master"
-        runs = "php7.1 vendor/bin/phpunit"
-    }
-
     steps:
       - uses: actions/checkout@v2
       - uses: franzliedke/gh-action-php@master
