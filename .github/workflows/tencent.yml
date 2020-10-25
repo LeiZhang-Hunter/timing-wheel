@@ -24,7 +24,7 @@ jobs:
         run: yarn && yarn build
 
       - name: Upload COS
-        uses: zhanglei/LeiZhang-Hunter/timing-wheel@master
+        uses: zkqiang/tencent-cos-action@master
         with:
           args: delete -r -f / && upload -r ./dist/ /
           secret_id: ${{ secrets.SECRET_ID }}
