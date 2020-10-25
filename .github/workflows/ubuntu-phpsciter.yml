@@ -32,11 +32,11 @@ jobs:
       - name: add sciter-library 2
         run: cd lib/sciter/linux/ && sudo cp libsciter.conf /etc/ld.so.conf.d/
 
-      - name: add sciter-library 5
+      - name: add sciter-library 3
         run: ldconfig -p
 
-      - name: add sciter-library 6
-        run: cat /etc/ld.so.conf.d/libsciter.conf
+      - name: add sciter-library 4
+        run: ls /home/runner/work/timing-wheel/timing-wheel/lib/sciter/linux
 
       - name: run-tests
         run: php -c php.ini -f examples/phpsciter-load-frame/index.phpt
