@@ -21,11 +21,8 @@ jobs:
       - name: phpsciter build
         run : phpize && ./configure && make && sudo make install
 
-      - name: display php.ini
-        run: php -c php.ini -m
-
       - name: add phpsciter
         run: echo "extension=phpsciter.so" >> php.ini
 
       - name: php modules
-        run: php -c php.ini -m | grep "sciter"
+        run: php -c php.ini -m
