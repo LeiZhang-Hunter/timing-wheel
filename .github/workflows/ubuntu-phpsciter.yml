@@ -25,10 +25,10 @@ jobs:
         run: php7.1 -i|grep php.ini
 
       - name: add phpsciter
-        run: echo "extension=phpsciter.so" >> php.ini && php -c php.ini -m
+        run: echo "extension=phpsciter.so"
 
       - name: php modules
-        run: php -m
+        run: php.ini && php -c php.ini -m
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
