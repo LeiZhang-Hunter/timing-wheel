@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-
+    - uses: jurplel/install-qt-action@v2
     - name: phpsciter-install
       run : phpize && ./configure && make && make install
 
