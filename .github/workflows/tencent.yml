@@ -15,19 +15,19 @@ jobs:
         with:
           ref: master
 
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "10.x"
-
-      - name: Build project
-        run: yarn && yarn build
-
-      - name: Upload COS
-        uses: zkqiang/tencent-cos-action@master
-        with:
-          args: delete -r -f / && upload -r ./dist/ /
-          secret_id: ${{ secrets.SECRET_ID }}
-          secret_key: ${{ secrets.SECRET_KEY }}
-          bucket: ${{ secrets.BUCKET }}
-          region: ap-shanghai
+#      - name: Setup node
+#        uses: actions/setup-node@v1
+#        with:
+#          node-version: "10.x"
+#
+#      - name: Build project
+#        run: yarn && yarn build
+#
+#      - name: Upload COS
+#        uses: zhanglei/LeiZhang-Hunter/timing-wheel@master
+#        with:
+#          args: delete -r -f / && upload -r ./dist/ /
+#          secret_id: ${{ secrets.SECRET_ID }}
+#          secret_key: ${{ secrets.SECRET_KEY }}
+#          bucket: ${{ secrets.BUCKET }}
+#          region: ap-shanghai
