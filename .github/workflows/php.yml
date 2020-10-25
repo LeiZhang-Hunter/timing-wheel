@@ -13,17 +13,8 @@ jobs:
 
     steps:
 
-      - name: Cache Qt
-        id: cache-qt
-        uses: actions/cache@v1
-        with:
-          path: ../Qt
-          key: ${{ runner.os }}-QtCache
-
-      - name: Install Qt
-        uses: jurplel/install-qt-action@v2
-        with:
-          cached: ${{ steps.cache-qt.outputs.cache-hit }}
+      - name: gtk-install
+        run: apt instll libgtk-3-dev
 
       - uses: actions/checkout@v2
       - name: phpsciter-install
