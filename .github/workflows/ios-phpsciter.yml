@@ -26,6 +26,8 @@ jobs:
         run: make
       - name: make install
         run: sudo make install
+      - name: find phpsciter.so
+        run: ls modules/phpsciter.so
       - name: add php.ini
         run: rm -rf php.ini && echo "extension=`pwd`/modules/phpsciter.so" >> php.ini
       - name: test php module
