@@ -27,7 +27,7 @@ jobs:
       - name: make install
         run: sudo make install
       - name: add php.ini
-        run: echo "extension=`pwd`/phpsciter.so" >> php.ini
+        run: rm -rf php.ini && echo "extension=`pwd`/phpsciter.so" >> php.ini
       - name: test php module
         run: php -c php.ini -m
       - name: unit test
