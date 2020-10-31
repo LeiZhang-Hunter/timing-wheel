@@ -23,6 +23,12 @@ if ($pid == 0)
 } else {
     sleep(2);
     pcntl_waitpid($pid, $status, WNOHANG);
+
+    if (pcntl_wexitstatus($status) == 1) {
+        exit(0);
+    }
+
+
     if (pcntl_wexitstatus($status) > 0)
     {
         exit(pcntl_wexitstatus($status));
