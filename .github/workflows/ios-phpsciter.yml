@@ -1,28 +1,28 @@
-#name: ios-phpsciter
-#
-#on:
-#  push:
-#    branches: [ master ]
-#  pull_request:
-#    branches: [ master ]
-#
-#jobs:
-#  build:
-#    name: Build and Test default scheme using any available iPhone simulator
-#    runs-on: macos-latest
-#
-#    steps:
-#      - name: Checkout
-#        uses: actions/checkout@v2
-#      - name: Ios build
-#        run: |
-#          phpize
-#          ./configure
-#          cd lib/sciter/mac
-#          export DYLD_LIBRARY_PATH=$PWD
-#          cd ../../../
-#          make
-#          sudo make install
-#          echo "extension=phpsciter.so" >> php.ini
-#          php -c php.ini -m
-#          php -c php.ini -f examples/phpsciter-load-frame/index.phpt
+name: ios-phpsciter
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    name: Build and Test default scheme using any available iPhone simulator
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Ios build
+        run: |
+          phpize
+          ./configure
+          cd lib/sciter/mac
+          export DYLD_LIBRARY_PATH=$PWD
+          cd ../../../
+          make
+          sudo make install
+          echo "extension=phpsciter.so" >> php.ini
+          php -c php.ini -m
+          php -c php.ini -f examples/phpsciter-load-frame/index.phpt
