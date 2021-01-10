@@ -17,7 +17,7 @@ jobs:
         php: [7.4]
 
     env:
-      PHP_VERSION: 7.4
+      PHP_VERSION: ${{ matrix.php }}
 
     steps:
       - uses: actions/checkout@v2
