@@ -1,4 +1,4 @@
-FROM php:7.4-fpm
+FROM php:${PHP_VERSION}
 RUN set -eux; \
     echo "deb http://mirrors.aliyun.com/debian/ buster main non-free contrib \n \
       deb-src http://mirrors.aliyun.com/debian/ buster main non-free contrib \n \
