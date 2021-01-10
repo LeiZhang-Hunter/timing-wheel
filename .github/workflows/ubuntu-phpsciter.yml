@@ -23,7 +23,7 @@ jobs:
         run: sudo apt-get install libgtk-3-dev
 
       - name: phpsciter build
-        run : phpize && ./configure && make && sudo make install
+        run : php -v && phpize && ./configure && make && sudo make install
 
       - name: add phpsciter
         run: rm -rf php.ini && echo "extension=phpsciter.so" >> php.ini
