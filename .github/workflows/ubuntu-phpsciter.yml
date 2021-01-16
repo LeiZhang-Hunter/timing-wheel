@@ -16,11 +16,11 @@ jobs:
 
 
       - name: use php 7.4
+        uses: actions/setup-php@v2
         with:
         php-version: 7.4
 
       - name: php version
-        uses: actions/setup-php@v2
         run: php -v
 
 #      - name: gtk-install
