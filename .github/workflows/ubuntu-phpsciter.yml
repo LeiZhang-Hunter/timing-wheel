@@ -16,7 +16,11 @@ jobs:
 
 
       - name: use php 7.4
-        uses: MilesChou/php-tools-action/7.4/phpunit@master
+        with:
+        php-version: 7.4
+
+      - name: php version
+        run: php -v
 
 #      - name: gtk-install
 #        run: sudo apt-get install libgtk-3-dev
