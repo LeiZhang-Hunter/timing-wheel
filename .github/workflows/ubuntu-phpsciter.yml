@@ -13,10 +13,7 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-
-
-      - name: use php 7.4
-        uses: actions/setup-php@v2
+      - uses: php-actions/phpstan@v2
 
       - name: php version
         run: php -v
