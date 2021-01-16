@@ -17,8 +17,6 @@ jobs:
 
       - name: use php 7.4
         uses: actions/setup-php@v2
-        with:
-        php-version: 7.4
 
       - name: php version
         run: php -v
