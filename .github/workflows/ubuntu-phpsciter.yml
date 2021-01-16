@@ -11,30 +11,18 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        php: [7.4]
-        phpsciter: [1.01]
-
-    env:
-      PHP_VERSION: ${{ matrix.php }}
-      PHPSCITER_VERSION: ${{ matrix.phpsciter }}
-
     steps:
       - uses: actions/checkout@v2
 
-      - name: start docker
-          run: |
-            cd .github
-            # phpsciter
-            docker-compose up -d phpsciter-$PHPSCITER_VERSION
+      - name: use php 7.4
+          uses: franzliedke/gh-action-php@master
+          run: php -v
 
 #      - name: gtk-install
 #        run: sudo apt-get install libgtk-3-dev
 #
 #      - name: phpsciter build
-#        run : php -v && phpize && ./configure && make && sudo make install
+#        run : phpize && ./configure && make && sudo make install
 #
 #      - name: add phpsciter
 #        run: rm -rf php.ini && echo "extension=phpsciter.so" >> php.ini

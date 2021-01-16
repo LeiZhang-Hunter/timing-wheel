@@ -1,9 +1,0 @@
-version: "3.4"
-services:
-  phpsciter-1.0.1:
-    container_name: phpsciter
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-      args:
-        PHP_VERSION: ${PHP_VERSION}
