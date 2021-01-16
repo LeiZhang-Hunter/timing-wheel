@@ -12,9 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: MilesChou/php-tools-action/7.4/phpcs@master
+      - uses: actions/checkout@v2
+
 
       - name: use php 7.4
+        uses: MilesChou/php-tools-action/7.4/phpcs@master
         run: php -v
 
 #      - name: gtk-install
