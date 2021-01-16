@@ -12,8 +12,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-
       - uses: MilesChou/php-tools-action/7.4/phpcs@master
 
       - name: use php 7.4
