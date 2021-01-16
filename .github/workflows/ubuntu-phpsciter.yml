@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: use php 7.4
-          run: php -v
+        run: php -v
 
 #      - name: gtk-install
 #        run: sudo apt-get install libgtk-3-dev
